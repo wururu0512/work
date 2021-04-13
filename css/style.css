@@ -1,166 +1,40 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, body {
   margin: 0px;
-  font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
 }
 
 nav {
   width: 100%;
-  height: 55px;
-}
-
-.container {
-  width: 1600px;
-  height: 100%;
-  margin: auto;
+  height: 70px;
+  background-color: #c5c4ee;
 }
 
 nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-nav .links {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-}
-
-nav .links .link {
-  text-decoration: none;
-  margin-right: 13px;
-  color: black;
-}
-
-nav .links .logo {
-  background-image: url(./img/logo.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 120px;
-  height: 22px;
-  margin-left: 0px;
-}
-
-nav .options {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav .options .option {
-  text-decoration: none;
-  margin: 0px 20px;
-  color: black;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-nav .options .option:last-child {
-  margin: 0px;
-}
-
-nav .options .option div {
-  width: 20px;
-  height: 20px;
-  background-position: center;
-  background-size: cover;
-  margin-left: 10px;
-}
-
-nav .options .option .all {
-  background-image: url(./img/);
-}
-
-nav .options .option .search {
-  background-image: url(./img/放大鏡.jpg);
-}
-
-nav .options .option .shop {
-  background-image: url(./img/購物車.jpg);
-}
-
-nav .options .option .user {
-  background-image: url(./img/登入.jpg);
-  width: 30px;
-  height: 30px;
-}
-
-main .container .icon {
-  height: 177px;
-  padding-top: 48px;
-}
-
-main .container .icon .pic {
-  width: 554px;
-  height: 114px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .container .icon .pic .square {
-  width: 184px;
-  font-size: 15px;
-  padding: 12px 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#pic1 {
-  margin: 0px 0px 8px;
-  width: 40px;
-  height: 40px;
-  background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
-}
-
-#pic2 {
-  margin: 0px 0px 8px;
-  width: 40px;
-  height: 40px;
-  background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pndL?ver=5217&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
-}
-
-#pic3 {
-  margin: 0px 0px 8px;
-  width: 40px;
-  height: 40px;
-  background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pkvE?ver=d8fc&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true);
+.banner {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/logo.png");
 }
 /*# sourceMappingURL=style.css.map */
