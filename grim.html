@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grim</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .bg-img {
+            max-width: 80%;
+            max-height: 57.5%;
+            margin: 0 auto;
+            width: auto;
+
+
+        }
+
+        .herosection {
+            max-width: 1280px;
+            position: relative;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        .yellow { width: 20%;
+            height: 30%;
+            border-radius: 50%;
+            background-color: rgb(241, 230, 165);
+            filter: blur(20px);
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            z-index: -1;}
+
+        .pink {
+            width: 30%;
+            height: 50%;
+            border-radius: 50%;
+            background-color: rgb(239, 226, 214);
+            filter: blur(20px);
+            position: absolute;
+            left: 2%;
+            bottom: 15%;
+            z-index: -1;
+
+        }
+
+        .brown-1 {
+            width: 15%;
+            height: 15%;
+            border-radius: 50%;
+            background-color: rgb(229, 206, 159);
+            filter: blur(20px);
+            position: absolute;
+            left: 5%;
+            bottom: 10%;
+            z-index: -2;
+        }
+
+        .brown-2 {
+            width: 15%;
+            height: 15%;
+            border-radius: 50%;
+            background-color: rgb(229, 206, 159);
+            filter: blur(20px);
+            position: absolute;
+            right: 8%;
+            top: -8%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="herosection">
+        <div class="yellow"></div>
+        <div class="pink"></div>
+        <div class="brown-1"></div>
+        <div class="brown-2"></div>
+        <div class="bg-img">
+            <img src='./flower/house.png'>
+        </div>
+    </div>
+
+</body>
+
+</html>
