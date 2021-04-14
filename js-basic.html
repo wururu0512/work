@@ -7,18 +7,53 @@
     <title>Document</title>
     <style>
         .box1{
-            background-color: rgb(233, 248, 248);
+            width: 100px;
+            height: 100px;
+            background-color: rgb(250, 42, 87);
+        }
+     
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .clicked{
+            width: 20px;
+            height: 20px;
+            background-color:blue;
         }
     </style>
 </head>
 <body>
-    <div class="box1"></div>
-<script>
-    document .querySelector('.box1');
-    console.log('hello world');
-    console.log(256151);
-    console.log(document .querySelector('.box1'));
-</script>
+
+<div class="box1">red box</div>
+<div class="box2">green box</div>
+
+    <script>
+    var box1 = document.querySelector('.box1')
+
+    console.log(box1)
+
+    box1.onclick = function(){
+        console.log('box is clicked');
+        box1.classList.add('clicked')
+    }
+
+    var box2 = document.querySelector('.box2')
+
+    console.log(box2)
+
+    box2.onclick = function(){
+    console.log('box is clicked');
+    box2.classList.add('clicked')
+
+}
+
+box2.onclick = function(){
+    box1.classList.remove('clicked')
+}
+
+    </script>
 
 
  
