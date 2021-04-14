@@ -11,16 +11,21 @@ h1, h2, h3, h4, h5, h6, body {
   margin: 0px;
 }
 
+h1 {
+  color: white;
+}
+
 .container {
   width: 1200px;
   height: 100%;
   margin: auto;
+  background-color: blanchedalmond;
 }
 
 nav {
   width: 100%;
   height: 70px;
-  background-color: #c5c4ee;
+  background-color: #52281c;
 }
 
 nav .container {
@@ -32,9 +37,88 @@ nav .container {
           align-items: center;
 }
 
+main {
+  width: 100%;
+}
+
 .banner {
   width: 100%;
-  height: 100px;
-  background-image: url("../img/logo.png");
+  height: calc(100vh - 180px);
+  margin: auto;
+  background-image: url("../flower/house.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.links {
+  width: 100%;
+  height: 70px;
+  background-color: #fdebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+#blockB {
+  width: 100%;
+  height: 80vh;
+}
+
+#blockB .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#blockB .container .img {
+  width: 70%;
+  height: 70%;
+  background-image: url("../flower/florist.jpeg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#blockB .container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+  padding-right: 20px;
+  width: 60%;
+  height: 60%;
+}
+
+#blockB .container .text h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#blockB .container .text p {
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
