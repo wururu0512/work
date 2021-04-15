@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        var score = 59
-
+        var score = 99
         // 判斷 分數，根據以下條件。在console中輸出 等級 與 分數 (例:您的分數是59分，等級為己等)
-        // 如果 100 分 則是 甲上
+        // 如果 100 分以上  則是甲上
+        // 如果 100 分整    則是甲等 
         // 如果 90分以上 100未滿則是  乙等
         // 如果 80分以上 90未滿則是  丙等
         // 如果 70分以上 80未滿則是  丁等
         // 如果 60分以上 70未滿則是  戊等
         // 如果  0分以上 60未滿則是  己等
-    
-        if(score > 100){console.log('good');}
-        else if(score == 100){console.log(score + '甲上');}
-        else if(score >= 90){console.log(score + '乙等');}
-        else if(score >= 80){console.log(score + '丙等');}
-        else if(score >= 70){console.log(score + '丁等');}
-        else if(score >= 60){console.log(score + '戊等');}
-        else if(score >= 0){console.log(score + '己等');}
-        else if(score < 0){console.log(score + 'mistake');}
-    
+        // 如果  0分以下 則是錯誤
+
+        //以上條件，用if 與 elseif 從小到大排列
+if      (score < 0){console.log('mistake');} 
+else if (score < 60){ console.log(score + '己等');}
+else if (score < 70){console.log(score + '戊等');}
+else if (score < 80){console.log(score + '丁等');}
+else if (score < 90){console.log(score + '丙等');}
+else if (score < 100){console.log(score + '乙等');}
+else if (score == 100){console.log(score + '甲等');}
+else if (score >= 100){console.log(score + '甲上');}
 
 
-         
+
+
+
+
+
     </script>
 </body>
+
 </html>

@@ -20,7 +20,21 @@
     <div class="box1"></div>
     <script>
         var box1 = document.querySelector('.box1')
-        if(box1.classList.contains'checked')
+        box1.onclick = function(){
+            // 如果BOX1有包含(藍)顏色的情況下
+            if (box1.classList.contains('checked')) 
+            
+            {
+                //有藍色顏色時 拿掉
+                box1.classList.remove('checked')
+            } else {
+                //沒有藍顏色時 添加
+                box1.classList.add('checked')
+            }
+            
+        }
+        
+     
 
     </script>
 </body>
