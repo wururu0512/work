@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <label for="score">請輸入分數</label>
+    <input type="text" name="score" id="score">
+    <button id = "submit"> submit</button>
+    <span id="result"></span>
+
+    <script>
+
+        // 讓使用者輸入分數，按下按鈕後在span標籤中輸出 等級 與 分數 (例:您的分數是59分，等級為己等)
+        // 如果 100 分以上  則是甲上
+        // 如果 100 分整    則是甲等 
+        // 如果 90分以上 100未滿則是  乙等
+        // 如果 80分以上 90未滿則是  丙等
+        // 如果 70分以上 80未滿則是  丁等
+        // 如果 60分以上 70未滿則是  戊等
+        // 如果  0分以上 60未滿則是  己等  
+        // 如果  0分以下或是輸入的不是數字 則是回傳輸入錯誤的訊息  
+
+        //誰?
+        var score = document.querySelector('#score')
+        var submit = document.querySelector('#submit')
+        var result = document.querySelector('#result')
+        console.log();
+        //甚麼時候? 
+submit.onclick = function(){
+//點擊submit的時候會有什麼功能
+        //做甚麼?
+     if     (score.value < 0){result.innerHTML ='mistake'}  
+    else if (score.value < 60){ result.innerHTML = score.value + '己等'}
+    else if (score.value < 70){result.innerHTML = score.value + '戊等'}
+    else if (score.value < 80){result.innerHTML = score.value + '丁等'}
+    else if (score.value < 90){result.innerHTML = score.value +' 丙等'}
+    else if (score.value < 100){result.innerHTML =score.value + '乙等'}
+    else if (score.value == 100){result.innerHTML = score.value + '甲等'}
+    else if (score.value > 100){result.innerHTML =score.value + '甲上'}
+    else{result.innerHTML = 'wrong'}
+
+
+
+}
+        
+
+    </script>
+</body>
+
+</html>

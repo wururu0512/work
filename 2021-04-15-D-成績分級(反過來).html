@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        var score = 99
+        var score = 'abc'
         // 判斷 分數，根據以下條件。在console中輸出 等級 與 分數 (例:您的分數是59分，等級為己等)
         // 如果 100 分以上  則是甲上
         // 如果 100 分整    則是甲等 
@@ -29,8 +29,8 @@ else if (score < 80){console.log(score + '丁等');}
 else if (score < 90){console.log(score + '丙等');}
 else if (score < 100){console.log(score + '乙等');}
 else if (score == 100){console.log(score + '甲等');}
-else if (score >= 100){console.log(score + '甲上');}
-
+else if (score > 100){console.log(score + '甲上');}
+else{console.log('wrong');}
 
 
 
