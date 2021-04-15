@@ -143,6 +143,28 @@
         start_btn.onclick = function(){
             resultCanvas.classList.add('active')
             
+            if     (score.value < 0){result.innerHTML ='mistake'}  
+    else if (score.value < 60){ result.innerHTML = score.value + '己等'}
+    else if (score.value < 70){result.innerHTML = score.value + '戊等'}
+    else if (score.value < 80){result.innerHTML = score.value + '丁等'}
+    else if (score.value < 90){result.innerHTML = score.value +' 丙等'}
+    else if (score.value < 100){result.innerHTML =score.value + '乙等'}
+    else if (score.value == 100){result.innerHTML = score.value + '甲等'}
+    else if (score.value > 100){result.innerHTML =score.value + '甲上'}
+    else{result.innerHTML = 'wrong'}
+
+
+
+
+
+
+
+
+
+
+
+
+            
         }
    
     
