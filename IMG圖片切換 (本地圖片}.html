@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    
+    <img   src="./flower/florist.jpeg" alt="">
+    
+
+    <script>
+var img = document.querySelector('img')
+//先抓到圖片
+console.log(img);
+// ?
+ var x = 1 
+//點到圖片時     //功能-要切換圖片
+img.onclick = function(){    
+           
+            console.log(x);
+            //判斷 ==
+            //如果圖片是這張(A)的情況下
+            if (x == 1 ) 
+             {
+               //符合就換圖片(B)
+               x = 2
+             img.src = './flower/house.png'
+
+              
+               //不符合就換回原本圖片(A)
+            } else {
+                x = 1
+               img.src = './flower/florist.jpeg'
+            }
+            
+        }
+
+
+    </script>
+</body>
+
+</html>
