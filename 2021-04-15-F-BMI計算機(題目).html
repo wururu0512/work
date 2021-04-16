@@ -136,24 +136,25 @@
     </div>
 
     <script>
+        //網頁一打開做的事
         var start_btn = document.querySelector("#start_btn")
         var resultCanvas = document.querySelector(".resultCanvas")
-
+        var weight = document.querySelector("#weight")
+        var height = document.querySelector("#height")
+        var result_bodyStatus = document.querySelector("result_bodyStatus")
+        var result_suggest = document.querySelector( "result_suggest")
         
+        //點開始計算時，才有身高體重VALUE的值，之後能帶入BMI公式計算，計算後的值要呈現在下方框框內
         start_btn.onclick = function(){
-            resultCanvas.classList.add('active')
+            resultCanvas.classList.add('active') //添加樣式(opacity)
+
+            bmi = weight.value + height.value
+        console.log(bmi);
+         
+             result_BMI.innerhtml = bmi
             
-            if     (score.value < 0){result.innerHTML ='mistake'}  
-    else if (score.value < 60){ result.innerHTML = score.value + '己等'}
-    else if (score.value < 70){result.innerHTML = score.value + '戊等'}
-    else if (score.value < 80){result.innerHTML = score.value + '丁等'}
-    else if (score.value < 90){result.innerHTML = score.value +' 丙等'}
-    else if (score.value < 100){result.innerHTML =score.value + '乙等'}
-    else if (score.value == 100){result.innerHTML = score.value + '甲等'}
-    else if (score.value > 100){result.innerHTML =score.value + '甲上'}
-    else{result.innerHTML = 'wrong'}
 
-
+           
 
 
 
