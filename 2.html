@@ -62,6 +62,7 @@
         .tab-content.active {
             display: block;
         }
+        
     </style>
 </head>
 
@@ -99,6 +100,7 @@
         var btn1 = document.querySelector('#btn1')
         var btn2 = document.querySelector('#btn2')
         var btn3 = document.querySelector('#btn3')
+        var tab = document.querySelector('.tab-content')
         console.log(btn1, btn2, btn3);
 
         // 先加全部刪除的功能
@@ -111,7 +113,7 @@
             clearALLActive()
             //再添加ACTIVE
             btn1.classList.add('active')
-
+            tab.classList.add('active') 
         }
         btn2.onclick = function () {
             clearALLActive()
