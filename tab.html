@@ -121,7 +121,26 @@
     <script>
         var btns = document.querySelectorAll('.tab-btn')
         var contents = document.querySelectorAll('.tab-content')
-console.log(tab-btn,);
+
+        
+        function clearAllActive(){
+            for (let index = 0; index < btns.length; index++) {
+                btns[index].classList.remove('active')
+                contents[index].classList.remove('active')
+            }
+        }
+
+        for (let index = 0; index < btns.length; index++) {
+            btns[index].onclick = function(){
+                clearAllActive()
+                btns[index].classList.add('active')
+                contents[index].classList.add('active')
+            }
+        }  
+
+
+
+
 
     </script>
 </body>
