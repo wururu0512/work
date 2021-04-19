@@ -62,7 +62,6 @@
         .tab-content.active {
             display: block;
         }
-        
     </style>
 </head>
 
@@ -119,9 +118,32 @@
         </div>
     </div>
     <script>
+
+
+
+
         var btns = document.querySelectorAll('.tab-btn')
         var contents = document.querySelectorAll('.tab-content')
-console.log(tab-btn,);
+
+      
+        
+        for (let index = 0; index < btns.length; index++) {
+
+            btns[index].onclick = function () {
+
+                
+                btns[index ].classList.add('active')
+                for (let index = 0; index < contents.length; index++) {
+                    contents[index].classList.add('active')  
+
+                }
+               
+
+            }
+
+        }
+
+
 
     </script>
 </body>
