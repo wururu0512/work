@@ -72,9 +72,6 @@
             <div id="btn1" class="tab-btn">按鈕1</div>
             <div id="btn2" class="tab-btn">按鈕2</div>
             <div id="btn3" class="tab-btn">按鈕3</div>
-            <div id="btn4" class="tab-btn">按鈕4</div>
-            <div id="btn5" class="tab-btn">按鈕5</div>
-            <div id="btn6" class="tab-btn">按鈕6</div>
         </div>
         <div class="tab-content-group">
             <div class="tab-content">
@@ -97,48 +94,34 @@
                     unde veniam nostrum nisi. Doloribus, tenetur magni atque numquam enim quam illum corporis fugiat
                     aliquid, maiores obcaecati.</p>
             </div>
-            <div class="tab-content">
-                <h1>內容4</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates aspernatur sunt tempora impedit
-                    unde veniam nostrum nisi. Doloribus, tenetur magni atque numquam enim quam illum corporis fugiat
-                    aliquid, maiores obcaecati.</p>
-            </div>
-            <div class="tab-content">
-                <h1>內容5</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates aspernatur sunt tempora impedit
-                    unde veniam nostrum nisi. Doloribus, tenetur magni atque numquam enim quam illum corporis fugiat
-                    aliquid, maiores obcaecati.</p>
-            </div>
-            <div class="tab-content">
-                <h1>內容6</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates aspernatur sunt tempora impedit
-                    unde veniam nostrum nisi. Doloribus, tenetur magni atque numquam enim quam illum corporis fugiat
-                    aliquid, maiores obcaecati.</p>
-            </div>
-
         </div>
     </div>
     <script>
-        var btns = document.querySelectorAll('.tab-btn')
-        var contents = document.querySelectorAll('.tab-content')
+        var btn1 = document.querySelector('#btn1')
+        var btn2 = document.querySelector('#btn2')
+        var btn3 = document.querySelector('#btn3')
+        var tab = document.querySelector('.tab-content')
+        console.log(btn1, btn2, btn3);
 
-        
-        function clearAllActive(){
-            for (let index = 0; index < btns.length; index++) {
-                btns[index].classList.remove('active')
-                contents[index].classList.remove('active')
-            }
+        // 先加全部刪除的功能
+        function clearALLActive(){
+         btn1.classList.remove('active')
+         btn2.classList.remove('active')
         }
+        btn1.onclick = function () {
+            console.log(123);
+            clearALLActive()
+            //再添加ACTIVE
+            btn1.classList.add('active')
+            tab.classList.add('active') 
+        }
+        btn2.onclick = function () {
+            clearALLActive()
 
-        for (let index = 0; index < btns.length; index++) {
-            btns[index].onclick = function(){
-                clearAllActive()
-                btns[index].classList.add('active')
-                contents[index].classList.add('active')
-            }
-        }  
+            btn2.classList.add('active')
 
 
+        }
 
 
 
