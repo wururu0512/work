@@ -136,34 +136,75 @@
     </div>
 
     <script>
-        var start_btn = document.querySelector("#start_btn")
-
-        var weight = document.querySelector('#weight')
         var height = document.querySelector('#height')
+        var weight = document.querySelector('#weight')
+        var start = document.querySelector('#start_btn')
         var result_BMI = document.querySelector('#result_BMI')
         var result_bodyStatus = document.querySelector('#result_bodyStatus')
         var result_suggest = document.querySelector('#result_suggest')
-        var resultCanvas = document.querySelector(".resultCanvas")
+        var resultCanvas = document.querySelector('.resultCanvas')
+        var reset_btn = document.querySelector('#reset_btn')
+        //按下去之後有什麼功能
+        start.onclick = function () {
+            //顯示下面框    
 
-
-
-        start_btn.onclick = function () {
             resultCanvas.classList.add('active')
 
-            var BMI = weight.value/Math.pow(height.value/100, 2)
-            result_BMI.innerHTML = BMI.toFixed(1)
+            //防呆措施    
+            if (weight.value == '' || height.value == '') { window.alert("請正確的輸入數值"); }
+            else if (weight.value < 0 || height.value < 0) { window.alert("please enter right number") }
+            else if (isNaN(weight.value) || isNaN(height.value)) { window.alert("please enter") }
+            //    
+            else {
+                // 計算BMI的值
+                var bmi = weight.value / Math.pow(height.value / 100, 2)
+                result_BMI.innerHTML = bmi.toFixed(1)
+                var i = result_BMI.innerHTML
 
-       
-       if (result_BMI.innerHTML < 18.5) { result_bodyStatus.innerHTML = '體重過輕',     result_suggest.innerHTML = 'eat more' }
-            else if (result_BMI.innerHTML < 24) { result_bodyStatus.innerHTML = '正常範圍', result_suggest.innerHTML = 'eat' }
-            else if (result_BMI.innerHTML < 27) { result_bodyStatus.innerHTML = '異常範圍', result_suggest.innerHTML = 'eat less' }
+                // 判斷區間
+                if (i < 18.5) { result_bodyStatus.innerHTML = '體重過輕', result_suggest.innerHTML = 'eat more' }
+                else if (i < 24) {
+                    result_bodyStatus.innerHTML = '正常範圍'
+                        , result_suggest.innerHTML = 'eat '
+                }
+                else if (i < 27) {
+                    result_bodyStatus.innerHTML = '異常範圍'
+                        , result_suggest.innerHTML = 'eat less1'
+                }
+                else if (i < 30) {
+                    result_bodyStatus.innerHTML = '異常範圍'
+                        , result_suggest.innerHTML = 'eat less2'
+                }
+                else if (i < 35) {
+                    result_bodyStatus.innerHTML = '異常範圍'
+                        , result_suggest.innerHTML = 'eat less3'
+                }
+                else if (i >= 35) {
+                    result_bodyStatus.innerHTML = '異常範圍'
+                        , result_suggest.innerHTML = 'eat less4'
+                }
 
-           
-
-
-     
-
+            }
         }
+
+
+
+            reset_btn.onclick = function () {
+              //一定要給他一個值，不然無法定義
+                weight.value = ''
+                height.value = ''
+                resultCanvas.classList.remove('active')
+            }
+
+        
+
+
+
+
+
+
+
+
 
 
     </script>
