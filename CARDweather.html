@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .card-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:  space-around;
+            align-content: flex-start;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: rgb(46, 37, 54);
+            margin: 0 0 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .photo {
+            width: 100%;
+            height: 60%;
+            background-color: rgb(173, 171, 173);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            width: 100%;
+            height: 40%;
+            padding: 10px 0;
+            background-color: rgb(237, 217, 248);
+            color: rgb(59, 54, 59);
+
+
+
+        }
+
+        .sunny {
+            width: 150px;
+            height: 150px;
+            fill: rgba(255, 214, 51, 1);
+            stroke: rgba(255, 214, 51, 0.5);
+            stroke-dasharray: 3px;
+            stroke-width: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="card-group"></div>
+
+    <script>
+
+
+        //宣告變數，準備改變card-group的HTML
+        var cardgroup = document.querySelector('.card-group')
+
+        // 日期
+        var someDate = new Date()
+
+        var dd = someDate.getDate();
+        var mm = someDate.getMonth() + 1;
+        var y = someDate.getFullYear();
+
+        var someFormattedDate = y + '/'+ mm + '/'+ dd
+
+        console.log(someFormattedDate);
+
+
+        //API天氣資料    
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (weather_data) {
+                            //可以自己取名
+
+
+                // console.log(weather_data);
+                //確認有無抓到，從中找到天氣的縣市資料結構records->location
+
+
+
+                let location = weather_data.records.location
+                // 抓全部的縣市資料出來                 
+
+                console.log(weather_data.records.location);
+                // 檢查有無抓到縣市資料
+   
+                                //元素 
+                location.forEach(city => {
+                // 使用FOREACH 迴圈抓出同類型資料
+
+                let city_name = city.locationName
+                console.log(city_name);
+                // 檢查有無抓到縣市名稱
+
+
+               
+                // 資料要一層一層下去抓出，順序是 foreach的元素名稱-> 天氣資料如wix ~ ->時間範圍(抓到底)
+
+                // ps逐步檢查是否有抓成功LOG
+
+                let wix = city.weatherElement[0].time[0].parameter.parameterName 
+                //天氣現象 LOG
+
+                let PoP = city.weatherElement[1].time[0].parameter.parameterName 
+                //降雨機率 LOG
+
+                let minT = city.weatherElement[2].time[0].parameter.parameterName  
+                // 最低溫度 LOG
+
+                let CI = city.weatherElement[3].time[0].parameter.parameterName 
+                //舒適度 LOG
+
+                let maxT = city.weatherElement[4].time[0].parameter.parameterName
+                // 最高溫度 LOG
+            
+
+
+
+
+                // 改變HTML(innerHTML +樣本字串``)      
+                // + 累加
+                cardgroup.innerHTML += 
+
+                `<div class="card">
+            <p>縣市名稱:${city_name}</p>
+            <div class="photo">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+                <p>天氣現象:${wix}</p>
+                <p>降雨機率:${PoP}</p>
+
+                <p>最低溫度:${minT}</p>
+                <p>舒適度:${CI}</p>
+                <p>最高溫度:${maxT}</p>
+                <p>日期:${someFormattedDate}</p>
+            </div>
+        </div> ` 
+
+        if(wix = '多雲') {
+
+        }
+
+
+
+
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
