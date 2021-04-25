@@ -181,6 +181,22 @@ a {
 
 
 }
+
+#blockD{
+  
+  width: 100%;
+  height: 60vh;
+  background-image: url("../img/截圖\ 2021-04-25\ 上午11.33.35.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+
+}
+
+
 #blockF{
   width: 100%;
  
@@ -227,6 +243,7 @@ background-image: url("../img/room.jpg");
 
 background-position: center;
 background-repeat: no-repeat;
+background-size: cover;
 position: absolute;
 z-index: -1;
 top: 0px;
