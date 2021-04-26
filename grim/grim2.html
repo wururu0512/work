@@ -1,108 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/grim.css">
+    <style>
+        /* 以下為區塊A */
+        #blockA{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        #blockA .left, #blockA .right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #blockA .left{
+            background-image: url(./業主提供/002primerib.jpg);
+        }
+        #blockA .right{
+            background-image: url(./業主提供/003lobster.jpg);
+        }
+        #blockA .text{
+            width: 50%;
+        }
+    </style>
 </head>
-
 <body>
-    <nav>
+    <div id="blockA">
+        <div class="left">
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio et porro est cum odio quae vel, laboriosam doloribus itaque debitis voluptates cumque pariatur nam ipsam soluta eius earum necessitatibus. Delectus.</div>
+        </div>
+        <div class="right">
+            <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in vel vitae nesciunt omnis voluptatibus blanditiis aspernatur expedita totam hic aperiam voluptate dolorem architecto sint delectus voluptatum, a deserunt quibusdam.</div>
+        </div>
+    </div>
+    <div id="blockE">
         <div class="container">
-            <h1>Grim</h1>
-        </div>
-    </nav>
-
-    <main>
-        <div class="container">
-            <div class="banner"></div>
-        </div>
-
-        <div class="links">
-            <a href="">first</a>
-            <a href="">second</a>
-            <a href="">third</a>
-            <a href="">forth</a>
-        </div>
-
-
-
-        <div id="blockB">
-            <div class="container">
+            <div class="news">
                 <div class="img"></div>
-                <div class="text">
-                    <h3>nice to meet you</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam libero dolore modi cupiditate optio. Officiis unde quas nostrum eius ex maxime molestias incidunt, ab ea voluptate nam. Veritatis, odit maiores.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae facilis repellendus quis consequuntur sunt quas necessitatibus nostrum laborum, magnam vel corrupti laudantium molestiae quae est maiores odio atque! Delectus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque natus aliquid provident autem
-                        molestiae culpa cumque incidunt, facere magnam. In error optio voluptatum voluptas et
-                        consequatur adipisci deleniti corporis quibusdam!</p>
+                <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore doloribus, illo est praesentium cum ducimus hic voluptates ullam adipisci reiciendis non error minima facilis reprehenderit! Dignissimos vero facere non maxime.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero explicabo repellat alias veritatis temporibus qui obcaecati voluptas. Soluta iure quia pariatur autem, voluptatum magni amet quisquam tempore nihil, reprehenderit libero.
                 </div>
+            </div>
+            <!-- 為了模擬後端串接後的網站，故意與上面一樣的結構，也方便呈現手機板的畫面 -->
+            <div class="news">
+                <div class="img"></div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
+            </div>
+            <div class="news">
+                <div class="img"></div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
+            </div>
+            <div class="news">
+                <div class="img"></div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
             </div>
         </div>
-
-        <div id="blockA">
-            <div class="left">
-                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, nam autem? Minus excepturi molestias quo maiores recusandae illo quas aut iure sapiente, qui nihil enim perferendis obcaecati rem, quos neque.</div>
-            </div>
-            <div class="right">
-                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ratione vitae deleniti possimus, necessitatibus id eaque, quisquam aut quia corrupti ab quasi! Consequatur numquam in necessitatibus delectus suscipit beatae asperiores?</div>
-            </div>
-        </div>       
-
-
-
-        <div id="blockE">
-            <div class="container">
-                <div class="news">
-                    <div class="img"></div>
-                    <div id="move-2" class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed nesciunt explicabo autem minima iure adipisci beatae voluptates, facere nostrum delectus! Sed, incidunt hic tenetur excepturi mollitia aperiam maiores ab suscipit.</div>
-                </div>
-                <div class="news">
-                    <div class="img"></div>
-                    <div id="move"class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vero voluptatibus vel magni ipsa error, maxime quibusdam nostrum odit, delectus officia quam impedit aspernatur soluta iure, necessitatibus id illo repellendus!</div>
-                </div>
-            </div>
-        </div>
-        
-  <div id="blockD"></div>
-
-        <div id="blockF">
-            <div class="container">
-                <div class="card">
-                    <div class="img"></div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque aliquam facilis cupiditate, eligendi iusto veniam obcaecati quaerat neque magni distinctio tenetur nesciunt nostrum praesentium blanditiis esse eaque harum deserunt!</div>
-                </div>
-                <div class="card">
-                    <div class="img"></div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aspernatur explicabo aliquid? Omnis, at corrupti molestias quaerat eveniet, unde corporis nemo ipsa velit culpa, sed libero atque quia tenetur assumenda.</div>
-                </div>
-                <div class="card">
-                    <div class="img"></div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis, quis soluta, dolores fuga quasi amet ullam architecto illum atque, aliquid et tempora ab excepturi totam consectetur dignissimos dolor doloremque!</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="blockC">
-            <div class="img"></div>
-            <div class="container">
-                <h1>hello there</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad minima sint delectus quia facere
-                    autem recusandae distinctio. Excepturi repudiandae vitae earum perspiciatis! Corporis veritatis
-                    repellat at mollitia cumque nesciunt?</p>
-            </div>
-        </div>
-      
-
-    </main>
-    <footer>
-        <div class="container"></div>
-    </footer>
+    </div>
 </body>
-
 </html>
