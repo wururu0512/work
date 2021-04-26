@@ -121,26 +121,22 @@ justify-content: center;
 
 
 
-
 #blockB {
   width: 100%;
   height: 80vh;
 }
 
 #blockB .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+
+display: flex;
+justify-content: space-between;
+
 }
 
 #blockB .container .img {
-  width: 70%;
-  height: 70%;
+  width: 50%;
+  height: 100%;
+  background-color: bisque;
   background-image: url("../img/florist.jpeg");
   background-position: center;
   background-size: contain;
@@ -148,30 +144,29 @@ justify-content: center;
 }
 
 #blockB .container .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 50%;
+  height: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 40px;
-  padding-right: 20px;
-  width: 60%;
-  height: 60%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #blockB .container .text h3 {
   font-size: 24px;
   font-weight: bold;
+ 
 }
 
 #blockB .container .text p {
   font-size: 18px;
+
 }
+
+
+
+
+
 
 #blockE{
   width: 100%;
@@ -181,12 +176,12 @@ justify-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 50px; 
+  padding: 200px 0px;
 }
 #blockE .container .news{
   width: 100%;
   height: 300px;
-  
+  justify-content: space-between;
   margin-bottom:50px;
   display: flex;
 }
@@ -202,7 +197,7 @@ justify-content: center;
 #blockE .container .news .img{
   width: 47.5%;
   height: 100%;
-  
+  background-color: rgb(242, 245, 232);
   background-image: url("../img/IMG_7317.jpg");
   background-position: center ;
   background-size: contain;
@@ -319,4 +314,46 @@ footer{
   height: 70px;
   background-color: rgb(184, 131, 101);
 
+}
+
+@media (max-width:1240px) {
+  /* 如果由1200開始縮就太突兀了 */
+  /* 所以由1240開始往下縮，有持續留有間距，看起來更平順 */
+  .container{
+    width: calc(100% - 40px);
+    /* 為了縮小後留的40間距 */
+  } 
+  /* 980 */
+}
+@media (max-width:800px) {
+  #blockA{
+    flex-direction: column;
+  }
+  #blockA .left, #blockA .right{
+    width: 100%
+  }
+
+  #blockB .container{
+    flex-direction: column;
+
+  }
+  #blockB .container .img{
+    width: 100%;
+
+  }
+  #blockB .container .text{
+    width: 100%;
+    padding: 0px 20px;
+    
+  }
+  #blockC{
+    position:static;
+    padding-top: 25px ;
+
+  }
+  #blockC .img{
+    position:static;
+    z-index: 0;
+  }
+  
 }
