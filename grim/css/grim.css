@@ -175,63 +175,54 @@ justify-content: center;
 
 #blockE{
   width: 100%;
+ 
+            background-color: wheat;
 
 }
 #blockE .container{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 50px; 
+  padding: 200px 0px;
+ 
 }
 #blockE .container .news{
-  width: 100%;
-  height: 300px;
-  
-  margin-bottom:50px;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+ height: 300px;
+background-color: turquoise;
+  margin-bottom: 50px;
 }
 
 
 #blockE .container .news:nth-child(2){
  flex-direction: row-reverse;
- margin-bottom: unset;
+
 }
 
-
-
-#blockE .container .news .img{
-  width: 47.5%;
-  height: 100%;
-  
-  background-image: url("../img/IMG_7317.jpg");
-  background-position: center ;
-  background-size: contain;
-  background-repeat: no-repeat;
+#blockE .container .news:last-child{
+  margin-bottom: 0px;
 }
 
-
-#blockE .container .news .text{
+#blockE .container .news .img,#blockE .container .news .text{
   width: 47.5%;
   height: 100%;
- 
   font-size: 24px;
-  
-
   display: flex;
   align-items: center;
-  padding: 0 120px;
 }
-#move{
-  margin-right:5% ;
+#blockE .container .news .img{
+background-image: url("../img/IMG_7317.jpg");
+  background-position: center ;
+  background-size: contain;
+  background-repeat: no-repeat;}
 
 
-}
-
-#move-2{
-  margin-left:5% ;
+  
 
 
-}
+
 
 #blockD{
   
@@ -318,5 +309,77 @@ footer{
   width: 100%;
   height: 70px;
   background-color: rgb(184, 131, 101);
+
+}
+@media (max-width:1240px){
+  .container{
+      width: calc(100% - 40px);
+  }
+
+}
+@media (max-width:800px){
+  /* 區塊A的RWD */
+  #blockA{
+      flex-direction: column;
+  }
+  #blockA .left, #blockA .right{
+      width: 100%;
+  }
+
+  /* 區塊B的RWD */
+  #blockB{
+      height: unset;
+  }
+  #blockB .container{
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 0px;
+  }
+
+  #blockB .container .img{
+      width: 100%;
+  }
+  #blockB .container .text{
+      width: 100%;
+      height: unset;
+
+  }
+  /* 區塊C的RWD */
+  #blockC{
+      background-color: rgb(150, 74, 12);
+      height: unset;
+      
+  }
+
+  #blockC .container{
+      flex-direction: column;
+      padding: 50px 0px;
+  }
+  #blockC .img{
+      position:static;
+      z-index: 0;
+      height: 400px;
+  }
+
+  /* 區塊D的RWD */
+
+
+  /* 區塊E的RWD */
+
+
+  /* 區塊F的RWD */
+
+  #blockF .container{
+      flex-direction: column;
+      padding: 50px 0px;
+  }
+  #blockF .container .card{
+      width: 100%;
+      height: unset;
+      margin-bottom: 20px;
+  }
+  #blockF .container .card .text{
+      padding: 10px 50px;
+  }
 
 }
