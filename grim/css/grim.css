@@ -356,4 +356,22 @@ footer{
     z-index: 0;
   }
   
+  #blockE{
+    margin-top: 300px;
+  }
+  #blockE .container .news:nth-child(n){
+    flex-direction: column;
+    height: unset;
+    padding: unset;
+
+  }
+  #blockE .container .news .img{
+    width: 100%;
+    height: 300px;
+    
+  }
+  #blockE .container .news .text{
+    width: 100%;
+    
+  }
 }
