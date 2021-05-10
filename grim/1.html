@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        h1,h2,h3,h4,h5,h6,body{
+            margin: 0px;
+        }
+        .container{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+        }
+
+        /* 以上為網頁共通設定 */
+
+        nav{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(150, 74, 12);
+            display: flex;
+            align-items: center;
+        }
+        nav .container{
+            display: flex;
+            align-items: center;
+        }
+
+        /* 以上為 Nav (導覽列) 設定 */
+        main{
+            width: 100%;
+        }
+        
+        #banner{
+            width: 100%;
+            height: calc(100vh - 140px);
+            background-image: url(./業主提供/001flatiron.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #links{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(150, 74, 12);
+        }
+        #links .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #links .link{
+            color: white;
+            width: 100px;
+            height: 30px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 以下為區塊A */
+        #blockA{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        #blockA .left, #blockA .right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #blockA .left{
+            background-image: url(./業主提供/002primerib.jpg);
+        }
+        #blockA .right{
+            background-image: url(./業主提供/003lobster.jpg);
+        }
+        #blockA .text{
+            width: 50%;
+        }
+        /* 以下為區塊B */
+        #blockB{
+            width: 100%;
+            height: 100vh;
+            background-color: grey;
+        }
+
+        #blockB .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #blockB .img{
+            width: 50%;
+            height: 50%;
+            background-image: url(./業主提供/004pasta_salad.jpg);
+            background-position: center;
+        }
+        #blockB .text{
+            width: 45%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            color: honeydew;
+            
+        }
+        #blockB .text p{
+            font-size: 24px;
+        }
+        /* 以下是區塊C */
+        #blockC{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        #blockC .img{
+            width: 100%;
+            height: 100%;
+            background-image: url(./業主提供/001flatiron.jpg);
+            background-position: center;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        #blockC .container{
+            display: flex;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+        }
+
+        #blockC .container p{
+            font-size: 24px;
+        }
+
+        /* 下方是區塊D */
+
+        #blockD {
+            width: 100%;
+            height: 50vh;
+            background-image: url(./業主提供/002primerib.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed
+        }
+
+        /* 下方是區塊E */
+
+        #blockE{
+            width: 100%;
+            background-color: wheat;
+           
+        }
+
+        #blockE .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 200px 0px;
+        }
+
+        #blockE .container .news{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 300px;
+
+            margin-bottom: 50px;
+        }
+
+        #blockE .container .news:nth-child(2n){
+            flex-direction: row-reverse;
+        }
+
+        #blockE .container .news:last-child{
+            margin-bottom: 0px;
+        }
+
+        #blockE .container .news .img,#blockE .container .news .text{
+            width: 47.5%;
+            height: 100%;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        #blockE .container .news .img{
+            background-image: url(./業主提供/004pasta_salad.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* 以下是區塊F */
+        #blockF{
+            width: 100%;
+            background-color: rgb(151, 114, 83);
+        }
+
+        #blockF .container{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 100px 0px;
+        }
+
+        #blockF .container .card{
+            width: 30%;
+            min-height: 750px;
+            
+        }
+
+        #blockF .container .card .img{
+            width: 100%;
+            height: 500px;
+            background-image: url(./業主提供/001flatiron.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            margin-bottom: 20px;
+        }
+
+        #blockF .container .card .text{
+            font-size: 24px;
+        }
+
+        /* 以下為footer */
+
+        footer{
+            width: 100%;
+            height: 500px;
+            background-color: rgb(150, 74, 12);
+        }
+
+        footer .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        footer .container .logo{
+            width: 500px;
+            height: 500px;
+            background-image: url(./業主提供/logo.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        footer .container .info{
+            color: white;
+            font-size: 24px;
+        }
+
+        @media (max-width:1240px){
+            .container{
+                width: calc(100% - 40px);
+            }
+
+        }
+
+        @media (max-width:800px){
+            /* 區塊A的RWD */
+            #blockA{
+                flex-direction: column;
+            }
+            #blockA .left, #blockA .right{
+                width: 100%;
+            }
+
+            /* 區塊B的RWD */
+            #blockB{
+                height: unset;
+            }
+            #blockB .container{
+                flex-direction: column;
+                justify-content: center;
+                padding: 50px 0px;
+            }
+
+            #blockB .container .img{
+                width: 100%;
+            }
+            #blockB .container .text{
+                width: 100%;
+                height: unset;
+
+            }
+            /* 區塊C的RWD */
+            #blockC{
+                background-color: rgb(150, 74, 12);
+                height: unset;
+                
+            }
+
+            #blockC .container{
+                flex-direction: column;
+                padding: 50px 0px;
+            }
+            #blockC .img{
+                position:static;
+                z-index: 0;
+                height: 400px;
+            }
+
+            /* 區塊D的RWD */
+
+
+            /* 區塊E的RWD */
+            #blockE .container{
+                padding: 50px 0px;
+            }
+
+            #blockE .container .news:nth-child(n){
+                flex-direction: column;
+                width: 100%;
+                height: unset;
+            }
+            #blockE .container .news .img{
+                width: 100%;
+                height: 300px;
+                margin-bottom: 10px;
+            }
+            #blockE .container .news .text{
+                width: 100%;
+                height: unset;
+            }
+
+            /* 區塊F的RWD */
+
+            #blockF .container{
+                flex-direction: column;
+                padding: 50px 0px;
+            }
+            #blockF .container .card{
+                width: 100%;
+                height: unset;
+                margin-bottom: 20px;
+            }
+            #blockF .container .card .text{
+                padding: 10px 50px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>傑克牛排</h1>
+        </div>
+    </nav>
+
+    <main>
+        <div id="banner"></div>
+        <div id="links">
+            <div class="container">
+                <a href="#blockC" class="link">第一區塊</a>
+                <a href="#blockD" class="link">第二區塊</a>
+                <a href="#blockE" class="link">第三區塊</a>
+                <a href="#blockE" class="link">第四區塊</a>
+            </div>
+        </div>
+        <div id="blockB">
+            <div class="container">
+                <div class="img"></div>
+                <div class="text">
+                    <h1>這是一段介紹牛排的文字</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur ex dolor expedita repellendus, eum laboriosam ullam maxime obcaecati aliquam suscipit repudiandae dolorem possimus ipsum recusandae ipsa laudantium? Dolore, assumenda qui?</p>
+                </div>
+            </div>
+        </div>
+        <div id="blockA">
+            <div class="left">
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio et porro est cum odio quae vel, laboriosam doloribus itaque debitis voluptates cumque pariatur nam ipsam soluta eius earum necessitatibus. Delectus.</div>
+            </div>
+            <div class="right">
+                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in vel vitae nesciunt omnis voluptatibus blanditiis aspernatur expedita totam hic aperiam voluptate dolorem architecto sint delectus voluptatum, a deserunt quibusdam.</div>
+            </div>
+        </div>
+        <div id="blockE">
+            <div class="container">
+                <div class="news">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore doloribus, illo est praesentium cum ducimus hic voluptates ullam adipisci reiciendis non error minima facilis reprehenderit! Dignissimos vero facere non maxime.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero explicabo repellat alias veritatis temporibus qui obcaecati voluptas. Soluta iure quia pariatur autem, voluptatum magni amet quisquam tempore nihil, reprehenderit libero.
+                    </div>
+                </div>
+                <!-- 為了模擬後端串接後的網站，故意與上面一樣的結構，也方便呈現手機板的畫面 -->
+                <div class="news">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
+                </div>
+                <div class="news">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
+                </div>
+                <div class="news">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium sint unde ipsum ratione sequi dolorum corrupti itaque quo optio aliquam ducimus, culpa explicabo delectus earum, fuga eligendi temporibus esse Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia facere cum fuga ut assumenda eos voluptas nobis, exercitationem, placeat in ipsum labore asperiores porro nulla iusto. Sed impedit nihil odit? reiciendis!</div>
+                </div>
+            </div>
+        </div>
+        <div id="blockF">
+            <div class="container">
+                <div class="card">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi asperiores porro odio eos, tempore recusandae facilis corrupti voluptas nesciunt repellendus, consectetur obcaecati optio. Sunt facere repellat numquam quae, dolores blanditiis?</div>
+                </div>
+                <div class="card">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, illo! Aspernatur assumenda quas vero iusto, temporibus distinctio ex ducimus, expedita maxime, perspiciatis laudantium blanditiis consequatur molestias eius rem illo. Eos.</div>
+                </div>
+                <div class="card">
+                    <div class="img"></div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipnam.</div>
+                </div>
+            </div>
+        </div>
+        <div id="blockC">
+            <div class="container">
+                <h1>這是一段介紹牛排的文字</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, omnis itaque! Nobis doloremque explicabo itaque, ad, repellat dolores eligendi pariatur corrupti eos voluptatibus autem placeat? Sit, sapiente. Doloremque, sed nesciunt.</p>
+                <div class="img"></div>
+            </div>
+        </div>
+        <div id="blockD">
+
+        </div>
+    
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo"></div>
+            <div class="info">此網頁為教學用，所有素材之所有權皆來自傑克牛排官網。</div>
+        </div>
+    </footer>
+
+</body>
+</html>
