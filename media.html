@@ -19,7 +19,7 @@
         nav {
             width: 300px;
             height: 100vh;
-
+            background-color: wheat;
         }
 
         /* 1280以上 */
@@ -100,10 +100,8 @@
             line-height: 510px;
 
         }
-
+        /* 1280~960 */
         @media (max-width:1280px) {
-
-
             #a {
                 width: 100%;
                 height: 50%;
@@ -122,18 +120,118 @@
             main .container .img-group {
                 width: 100%;
                 height: 100%;
-                flex-wrap: wrap;
+               flex-wrap: wrap; 
             }
 
         }
+        @media (max-width:960px) {
+           body{
+               display: unset;
+           }
+           nav {
+            width: 100%;
+            height: 150px;
+            /* 原本直排變成橫排，高度寫死 */
+            }
+
+            nav .container {
+            
+            width: 100%;
+            height:150px;
+            /* 原本直排變成橫排，高度寫死  */
+            flex-direction: row;
+            justify-content: space-around;
+            /* 照片跟按鈕橫向排列*/
+        }
+        nav .container img {
+            width: 100px;
+            height: 100px;
+            /* 照片寫死寬高，因為才不會跟著螢幕縮放 */
+            margin-bottom: unset;
+        }
+        nav .container .btn-group {
+            width: 70%;
+            height: 100px;
+            /* 因為要縮放，所以包按鈕不要寫死 */
+            display: flex;
+            justify-content: flex-end;
+            /* 包按鈕的靠右排列 */
+
+        }
+        nav .container .btn-group a {
+            display: inline-block;
+            /* 要排列又要給寬高 */
+            width: 100px;
+            height: 100px;
+            /* 按鈕寫死寬高，因為才不會跟著螢幕縮放 */
+            margin-bottom: unset;
+            line-height: 100px;
+            margin-left: 10px;
+         
+        }
+        main {
+            width: 100%;
+            height: 700px;
+        }
+        main .container {
+            width: 100%;
+            height: 700px;
+            padding: 50px;
+        }
+        main .container .img-group .img {
+            text-align: center;
+            line-height: 300px;
+
+        }
+
+
+
+        }
+     
+    
+        @media(max-width:576px) {
+
+            nav {
+            width: 100%;
+            height: 70px;
+            
+            }
+            nav .container .btn-group {
+                display: none;
+            }
+
+            nav .container {
+            
+            width: 100%;
+            height:70px;
+         
+            flex-direction: row;
+            justify-content: center;
+            /* 照片跟按鈕橫向排列*/
+        }
+        nav .container img {
+            width: 60px;
+            height: 60px;
+        }
+       .menu-btn{
+        width: 60px;
+        height: 60px;
+        background-color: tomato;
+        
+       }
+    }
+        
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="container">
+        <div class="container"> 
+             <div class="menu-btn"></div>
+            
             <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg"
                 alt="">
+              
             <div class="btn-group">
                 <a href="" target="_blank">btn</a>
                 <a href="" target="_blank">bnt</a>
