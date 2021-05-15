@@ -9,8 +9,11 @@
     <style>
         * {
             box-sizing: border-box;
+            
         }
-
+input{
+    display: none;
+}
         body {
             margin: 0;
             display: flex;
@@ -195,24 +198,50 @@
             width: 100%;
             height: 70px;
             
-            }
-            nav .container .btn-group {
-                display: none;
-            }
-
-            nav .container {
             
+            }    
+             nav .container {
+          
             width: 100%;
             height:70px;
             justify-content: unset;
             position: relative;
         }
+            nav .container .btn-group {
+           width: 50%;
+           height: 200px;
+           display: static;
+           background-color: thistle;
+           
+           border-radius:unset;
+           
+           position: absolute;
+           top: -1000px;
+           left: 0;
+           flex-direction: column;
+           justify-content: center;
+           transition: 1s;
+        
+            }
+
+            nav .container .btn-group a{
+               width: unset;
+               height: unset;
+               line-height: unset;
+    background-color: unset; 
+    margin: unset;
+    margin: 20px 0px;
+    border-bottom: 1px solid white;
+
+
+}
+       
         nav .container img {
             width: 60px;
             height: 60px;
             margin: auto;
         }
-       .menu-btn{
+       .menubtn{
         width: 60px;
         height: 60px;
         background-color: tomato;
@@ -220,7 +249,10 @@
         left: 10px;
 
        }
- 
+ #menucontrol:checked ~ nav .btn-group{
+     left: 0px;
+     top: 70px;
+ }
       
     }
         
@@ -228,12 +260,16 @@
 </head>
 
 <body>
+    <input type="checkbox" id="menucontrol">
     <nav>
+        
         <div class="container"> 
-             <div class="menu-btn"></div>
-            
+            <label for="menucontrol" class="menubtn">
+            </label>
             <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg"
                 alt="">
+
+            
               
             <div class="btn-group">
                 <a href="" target="_blank">btn</a>
