@@ -1,0 +1,44 @@
+main {
+    max-width: 1920px;
+}
+
+.membertitle {
+    @include title;
+    margin: auto;
+    width: 22.3%;
+    
+    position: relative;
+    background-color: aquamarine;
+
+    @include pad {
+        width: 27.2%;
+      
+        font-size: 42px;
+    }
+    @include iphone{
+        width: 25.3%;
+        font-size: 24px;
+    }
+    h2 {
+      font-size: clamp(20px,3.5vw,72px );
+        position: absolute;
+        top: 28px;
+        right: 0;
+        @include pad {
+            top: 22px;
+        }
+        @include iphone{
+            top: 11px;
+        }
+    }
+    img{
+       @include pad {
+            width: 50%;
+            
+        }
+        @include iphone{
+            width: 47.9%;
+          
+        }
+    }
+}

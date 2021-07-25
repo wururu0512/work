@@ -1,0 +1,147 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  line-height: 1.5;
+}
+
+.intro {
+  padding: 180px 140px 30px 140px;
+}
+.intro .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.intro .content .describe {
+  margin-left: 131px;
+  position: relative;
+}
+.intro .content .describe img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.intro .content h3 {
+  color: #fe886d;
+  padding: 48px 0px;
+}
+
+main {
+  max-width: 1920px;
+}
+
+.membertitle {
+  font-size: 72px;
+  font-weight: 500;
+  color: #4f4f4f;
+  margin: auto;
+  width: 22.3%;
+  position: relative;
+  background-color: aquamarine;
+}
+@media (max-width: 992px) {
+  .membertitle {
+    width: 27.2%;
+    font-size: 42px;
+  }
+}
+@media (max-width: 576px) {
+  .membertitle {
+    width: 25.3%;
+    font-size: 24px;
+  }
+}
+.membertitle h2 {
+  font-size: clamp(20px,3.5vw,72px );
+  position: absolute;
+  top: 28px;
+  right: 0;
+}
+@media (max-width: 992px) {
+  .membertitle h2 {
+    top: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .membertitle h2 {
+    top: 11px;
+  }
+}
+@media (max-width: 992px) {
+  .membertitle img {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .membertitle img {
+    width: 47.9%;
+  }
+}

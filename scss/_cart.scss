@@ -1,0 +1,25 @@
+.intro{
+   
+    padding: 180px 140px 30px 140px;
+    .content{
+        display: flex;
+        .describe{
+          margin-left: 131px;
+       
+          position: relative;
+          img{
+              position: absolute;
+              bottom: 0px;
+              right: 0px;
+
+          }
+          
+        }
+        h3{
+            color: #fe886d;
+            padding: 48px 0px;
+         
+        }
+        
+    }
+}
